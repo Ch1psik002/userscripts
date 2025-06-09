@@ -1,0 +1,19 @@
+de ad remover
+// @match https://linkvertise.com/*/*/dynamic
+// @grant       GM_xmlhttpRequest
+
+// @version     1.0
+
+// @description bypasses ad-paywalls
+
+// @run-at document-start
+
+// ==/UserScript==
+
+
+
+(() => {
+
+  location.href = atob(URL.parse(location.href).searchParams.get('r'))
+
+})();
